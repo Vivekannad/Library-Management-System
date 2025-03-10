@@ -27,7 +27,7 @@
                     <p class="category">Category:- <%=book.category.category%></p>
                     <p class="date">Published On:- <%=new Date(book.publishedOn).toLocaleDateString() %></p>
                 </a>
-              
+              <img src="<%= book.image %>" alt="" width="200">
             </div>
         <% }) %>
     </div>

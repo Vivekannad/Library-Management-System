@@ -6,7 +6,7 @@
 </head>
 <body>
     <%- include("./partials/navbar.ejs") %>
-    <form action="" method="post" class="form">
+    <form action="" method="post" class="form" enctype="multipart/form-data">
         <div class="input">
             <label for="title">Book Title</label>
             <input type="text" name="title" id="title" placeholder="Title">
@@ -18,6 +18,10 @@
                 <option value="drama">drama</option>
                 <option value="romance">romance</option>
             </select>
+        </div>
+        <div class="input">
+            <label for="file">Image</label>
+            <input type="file" name="file" id="file">
         </div>
         <div class="input">
             <label for="author">Author name</label>
