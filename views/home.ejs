@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Home</title>
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    <h1>All Books</h1>
+    <div class="filter">
+        <form action="/" method="GET">
+            <label for="filter">Set Filters</label>
+            <select name="filter" id="filter">
+                <option value="allBooks" <% if (selectedFilter === 'allBooks') { %> selected <% } %>>All Books</option>
+                <option value="availableBooks" <% if (selectedFilter === 'availableBooks') { %> selected <% } %>>Available Books</option>
+                <option value="borrowedBooks" <% if (selectedFilter === 'borrowedBooks') { %> selected <% } %>>Borrowed Books</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+        <div class="cards">
+        <% books.forEach(book => { %>
+            <div class="card">
+                <a href="/book/<%= book._id %>">
+                    <h1 class="title"><%= book.title %></h1>
+                    <p class="author">Author:- <%=book.author.name %></p>
+                    <p class="category">Category:- <%=book.category.category%></p>
+                    <p class="date">Published On:- <%=new Date(book.publishedOn).toLocaleDateString() %></p>
+                </a>
+              
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

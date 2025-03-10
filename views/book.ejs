@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Home</title>
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    <h1>Book</h1>
+        <div class="card">
+            <div class="title sub-card">
+                <h1>Title:- </h1>
+                <h1 class="title"><%= book.title %></h1>
+            </div>
+            <div class="author sub-card">
+                <p>Author:- </p>
+                <p class="author"><%=book.author.name %></p>
+            </div>
+            <div class="category sub-card">
+                <p>Genre:- </p>
+                <p class="category"><%=book.category.category%></p>
+            </div>
+            <div class="publishedOn sub-card">
+                <p>PublishedOn</p>
+                <p class="date"><%=new Date(book.publishedOn).toLocaleDateString() %></p>
+            </div>
+            <div class="sub-card">
+                <p>Status</p>
+                <p><% if (borrowedBook) { %>
+                    Borrowed
+                    <% } else {%>
+                        Available
+                        <% }%>
+                    </p>
+            </div>
+            <% if (borrowedBook) { %>
+                <div class="sub-card">
+                    <p>Borrowed Date:- </p>
+                    <p><%= new Date(borrowedBook.borrowDate).toLocaleDateString()  %></p>
+                </div>
+                <div class="sub-card">
+                    <p>Due Date:- </p>
+                    <p><%= new Date(borrowedBook.dueDate).toLocaleDateString() %></p>
+                </div>
+                <div class="sub-card">
+                    <p>Fine:- </p>
+                    <p>$<%= fine %></p>
+                </div>
+                <div class="sub-card">
+                    <button><a href="/return/<%= book._id %>">Return</a></button>
+                    </div>
+                    <% } else { %>  
+                        <div class="sub-card">
+                    <button><a href="/borrow/<%= book._id %>">Borrow</a></button>
+                </div>
+                    <%} %>
+        </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body {
+    background-color: aliceblue;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    * {
+
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    header {
+        display: flex;
+        margin: 10px 20px;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .links ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                list-style-type: none;
+            }
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        gap: 10px;
+
+        .input {
+            display: flex;
+            gap: 20px;
+            width: 500px;
+
+            label {
+                width: 40%;
+                text-align: center;
+            }
+
+            input,
+            select {
+                width: 30%;
+            }
+        }
+
+        .error {
+            color: rgb(172, 9, 9);
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: burlywood;
+            padding: 10px;
+            width: 250px;
+            border-radius: 10px;
+            gap: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        height: 50vh;
+        gap: 20px;
+        .sub-card{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            button{
+                width: 100%;
+                padding: 10px;
+                border:none;
+                background-color: green;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}

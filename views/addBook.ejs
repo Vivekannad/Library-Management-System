@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <title>Add Book</title>
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    <form action="" method="post" class="form">
+        <div class="input">
+            <label for="title">Book Title</label>
+            <input type="text" name="title" id="title" placeholder="Title">
+        </div>
+        <div class="input">
+            <label for="category">Book Category</label>
+            <select name="category" id="category">
+                <option value="thriller">thriller</option>
+                <option value="drama">drama</option>
+                <option value="romance">romance</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="author">Author name</label>
+            <input type="text" name="author" id="author" placeholder="author">
+        </div>
+        <div class="input">
+            <label for="date">Published On</label>
+            <input type="date" name="date" id="date" placeholder="published on">
+        </div>
+        <button>Add</button>
+    </form>
+</body>
+</html>

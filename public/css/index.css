@@ -1,0 +1,99 @@
+body {
+  background-color: aliceblue;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body * {
+  margin: 0;
+  padding: 0;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body header {
+  display: flex;
+  margin: 10px 20px;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body header nav .links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+}
+body .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  gap: 10px;
+}
+body .form .input {
+  display: flex;
+  gap: 20px;
+  width: 500px;
+}
+body .form .input label {
+  width: 40%;
+  text-align: center;
+}
+body .form .input input,
+body .form .input select {
+  width: 30%;
+}
+body .form .error {
+  color: rgb(172, 9, 9);
+  font-weight: bold;
+  font-size: 20px;
+}
+body .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+body .cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+}
+body .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 50vh;
+  gap: 20px;
+}
+body .card .sub-card {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+body .card .sub-card button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
